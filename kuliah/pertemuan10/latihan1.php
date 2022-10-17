@@ -36,10 +36,10 @@ $mahasiswa = $rows;
       <th>jurusan</th>
       <th>Aksi</th>
     </tr>
-
-    <?php foreach ($mahasiswa as $mhs) : ?>
+    <?php $i = 1;
+    foreach ($mahasiswa as $mhs) : ?>
       <tr>
-        <td>1</td>
+        <td><?= $i++;  ?></td>
         <td><img src="img/<?= $mhs['gambar']; ?>" width="60"></td>
         <td><?= $mhs['nrp']; ?></td>
         <td><?= $mhs['nama']; ?></td>
