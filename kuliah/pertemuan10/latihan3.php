@@ -29,7 +29,8 @@ $mahasiswa = Query("SELECT * FROM mahasiswa");
         <td><img src="img/<?= $mhs['gambar']; ?>" width="60"></td>
         <td><?= $mhs['nama']; ?></td>
         <td>
-          <a href="detail.php?id=phpp ">Lihat Detail</a>
+          <a href="detail.php?id=<?= $mhs['id']; ?>">Lihat Detail</a>
+
         </td>
       </tr>
     <?php endforeach; ?>
