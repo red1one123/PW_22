@@ -2,7 +2,7 @@
 require 'functions.php';
 
 //cek apakah tombol tambah sudah ditekan
-if (isset($_POST['Tambah'])) {
+if (isset($_POST['tambah'])) {
   var_dump($_POST);
 }
 
