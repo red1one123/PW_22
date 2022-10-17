@@ -1,5 +1,6 @@
 <?php
 require 'functions.php';
+
 //cek apakah tombol tambah sudah ditekan
 if (isset($_POST['Tambah'])) {
   var_dump($_POST);
@@ -27,11 +28,13 @@ if (isset($_POST['Tambah'])) {
         Nama :
         <input type="text" name="nama" autofocus>
       </label>
+    </li>
     <li>
       <label>
         Nrp :
         <input type="text" name="nrp">
       </label>
+    </li>
     <li>
       <label>
         Email :
@@ -53,14 +56,8 @@ if (isset($_POST['Tambah'])) {
     <li>
       <button type="submit" name="tambah">Tambah Data</button>
     </li>
-    </li>
-    </li>
-    </li>
-    </li>
   </ul>
-
-
-
+  </form>
 </body>
 
 </html>
