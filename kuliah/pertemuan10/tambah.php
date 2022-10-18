@@ -5,7 +5,6 @@ require 'functions.php';
 if (isset($_POST['tambah'])) {
   var_dump($_POST);
 }
-
 ?>
 
 
@@ -20,43 +19,43 @@ if (isset($_POST['tambah'])) {
 </head>
 
 <body>
-  <h3>Tambah Data Mahasiswa</h3>
-  <form action="" method="POST"></form>
-  <ul>
-    <li>
-      <label>
-        Nama :
-        <input type="text" name="nama" autofocus>
-      </label>
-    </li>
-    <li>
-      <label>
-        Nrp :
-        <input type="text" name="nrp">
-      </label>
-    </li>
-    <li>
-      <label>
-        Email :
-        <input type="text" name="email">
-      </label>
-    </li>
-    <li>
-      <label>
-        Jurusan :
-        <input type="text" name="jurusan">
-      </label>
-    </li>
-    <li>
-      <label>
-        Gambar :
-        <input type="text" name="gambar">
-      </label>
-    </li>
-    <li>
-      <button type="submit" name="tambah">Tambah Data</button>
-    </li>
-  </ul>
+  <h3>Form Tambah Data Mahasiswa</h3>
+  <form action="" method="POST">
+    <ul>
+      <li>
+        <label>
+          Nama :
+          <input type="text" name="nama" autofocus>
+        </label>
+      </li>
+      <li>
+        <label>
+          NRP :
+          <input type="text" name="nrp">
+        </label>
+      </li>
+      <li>
+        <label>
+          Email
+          <input type="text" name="email">
+        </label>
+      </li>
+      <li>
+        <label>
+          Jurusan
+          <input type="text" name="jurusan">
+        </label>
+      </li>
+      <li>
+        <label>
+          Gamabar :
+          <input type="text" name="gambar">
+        </label>
+      </li>
+      <li>
+        <button type="submit" name="tambah">Tambah Data!</button>
+      </li>
+    </ul>
   </form>
 </body>
 
