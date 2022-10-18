@@ -4,7 +4,10 @@ require 'functions.php';
 //cek apakah tombol tambah sudah ditekan
 if (isset($_POST['tambah'])) {
   if (tambah($_POST) > 0) {
-    echo "data berhasil ditambahkan!";
+    echo "<script>
+      alert('data berhasil ditambahkan');
+      document.location.href = 'latihan3.php';
+          </script>";
   } else {
     echo "data gagal ditambahkan!";
   }

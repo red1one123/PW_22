@@ -29,10 +29,10 @@ function tambah($data)
   $conn = koneksi();
 
   $nama = htmlspecialchars($data['nama']);
-  $nrp = $data['nrp'];
-  $email = $data['email'];
-  $jurusan = $data['jurusan'];
-  $gambar = $data['gambar'];
+  $nrp = htmlspecialchars($data['nrp']);
+  $email = htmlspecialchars($data['email']);
+  $jurusan = htmlspecialchars($data['jurusan']);
+  $gambar = htmlspecialchars($data['gambar']);
 
 
   $query = "INSERT INTO 
