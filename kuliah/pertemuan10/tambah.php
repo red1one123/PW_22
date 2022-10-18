@@ -25,31 +25,31 @@ if (isset($_POST['tambah'])) {
       <li>
         <label>
           Nama :
-          <input type="text" name="nama" autofocus>
+          <input type="text" name="nama" autofocus required>
         </label>
       </li>
       <li>
         <label>
           NRP :
-          <input type="text" name="nrp">
+          <input type="text" name="nrp" required>
         </label>
       </li>
       <li>
         <label>
           Email
-          <input type="text" name="email">
+          <input type="text" name="email" required>
         </label>
       </li>
       <li>
         <label>
           Jurusan
-          <input type="text" name="jurusan">
+          <input type="text" name="jurusan" required>
         </label>
       </li>
       <li>
         <label>
           Gamabar :
-          <input type="text" name="gambar">
+          <input type="text" name="gambar" required>
         </label>
       </li>
       <li>
