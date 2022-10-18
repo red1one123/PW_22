@@ -28,7 +28,7 @@ function tambah($data)
 {
   $conn = koneksi();
 
-  $nama = $data['nama'];
+  $nama = htmlspecialchars($data['nama']);
   $nrp = $data['nrp'];
   $email = $data['email'];
   $jurusan = $data['jurusan'];
@@ -38,7 +38,10 @@ function tambah($data)
   $query = "INSERT INTO 
             mahasiswa
              VALUES  
-              (null, '$nama', '$nrp', '$email', '$jurusan', '$gambar')";
+              (null, '$nama', '$nrp', '$email', '$jurusan', '$gambar');
+            ";
+
   mysqli_query($conn, $query);
+  echo mysqli_error($conn);
+  return mysqli_affected_rows($conn);
 }
-//INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALUES (NULL, 'rudi', '54626262', 'rudi@gmail.com', 'Teknik', 'rudi.jpg');

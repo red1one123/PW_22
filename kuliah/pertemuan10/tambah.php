@@ -3,7 +3,11 @@ require 'functions.php';
 
 //cek apakah tombol tambah sudah ditekan
 if (isset($_POST['tambah'])) {
-  var_dump($_POST);
+  if (tambah($_POST) > 0) {
+    echo "data berhasil ditambahkan!";
+  } else {
+    echo "data gagal ditambahkan!";
+  }
 }
 ?>
 
