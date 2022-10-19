@@ -2,6 +2,12 @@
 require 'functions.php';
 
 
+//jika tidak ada id di url
+if (!isset($_GET['id'])) {
+  header("location: index.php");
+  exit;
+}
+
 //ambil id dari url
 $id = $_GET['id'];
 //query mahasiswa berdasarkan id
@@ -68,7 +74,7 @@ if (isset($_POST['ubah'])) {
         </label>
       </li>
       <li>
-        <button type="submit" name="tambah">Ubah Data!</button>
+        <button type="submit" name="ubah">Ubah Data!</button>
       </li>
     </ul>
   </form>
