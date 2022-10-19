@@ -81,7 +81,10 @@ function cari($keyword)
   $conn = koneksi();
 
   $query = "SELECT * FROM mahasiswa
-            WHERE nama LIKE '%$keyword%'";
+            WHERE
+           nama LIKE '%$keyword%' OR
+           jurusan LIKE '%$keyword%'
+           ";
   $result = mysqli_query($conn, $query);
 
   $rows = [];
