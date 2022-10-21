@@ -1,10 +1,11 @@
 <?php
 require 'functions.php';
+
 if (isset($_POST['registrasi'])) {
   if (registrasi($_POST) > 0) {
     echo "<script>
           alert('user baru berhasil ditambahkan. silahkan login!');
-          document.location.href = 'login.php';
+          document. location.href = 'login.php';
           </script>";
   } else {
     echo 'user gagal ditambahkan!';

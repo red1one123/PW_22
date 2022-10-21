@@ -36,7 +36,7 @@ function tambah($data)
   $query = "INSERT INTO 
             mahasiswa
              VALUES  
-              (null, '$nama', '$nrp', '$email', '$jurusan', '$gambar');
+              (null, '$nama', '$nrp', '$email', '$jurusan', '$gambar')
             ";
 
   mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -97,6 +97,7 @@ function login($data)
   $conn = koneksi();
   $username = htmlspecialchars($data['username']);
   $password = htmlspecialchars($data['password']);
+  //cek dulu username nya
 
   if (query("SELECT * FROM user WHERE username = '$username' && password = '$password'")) {
 
@@ -115,6 +116,7 @@ function login($data)
 function registrasi($data)
 {
   $conn = koneksi();
+
   $username = htmlspecialchars(strtolower($data['username']));
   $password1 = mysqli_real_escape_string($conn, $data['passwprd1']);
   $password2 = mysqli_real_escape_string($conn, $data['password2']);
@@ -157,7 +159,7 @@ function registrasi($data)
   //insert ke tabel user
   $query = "INSERT INTO user
             VALUES
-            (null, '$username', '$password_baru');
+            (null, '$username', '$password_baru')
             ";
   mysqli_query($conn, $query) or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
