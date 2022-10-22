@@ -31,10 +31,10 @@ function upload()
 
   //ketika tidak ada gambar yang dipilih
   if ($error == 4) {
-    echo "<script>
-          alert('pilih gambar terlebih dahulu!');
-          </script>";
-    return false;
+    // echo "<script>
+    //       alert('pilih gambar terlebih dahulu!');
+    //       </script>";
+    return 'nophoto.jpg';
   }
   //cek ekstensi file
   $daftar_gambar = ['jpg', 'jpeg', 'png'];
