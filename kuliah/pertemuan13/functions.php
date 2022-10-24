@@ -21,6 +21,9 @@ function Query($query)
   return $rows;
 }
 
+
+
+
 function upload()
 {
   $nama_file = $_FILES['gambar']['name'];

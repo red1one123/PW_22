@@ -32,8 +32,6 @@ if (isset($_POST['ubah'])) {
   }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
