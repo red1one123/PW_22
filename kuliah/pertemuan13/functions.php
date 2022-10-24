@@ -92,12 +92,10 @@ function tambah($data)
   if (!$gambar) {
     return false;
   }
-
-
   $query = "INSERT INTO 
             mahasiswa
              VALUES  
-              (null, '$nama', '$nrp', '$email', '$jurusan', '$gambar')
+              (null, '$nama', '$nrp', '$email', '$jurusan', '$gambar');
             ";
 
   mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -122,7 +120,17 @@ function ubah($data)
   $nrp = htmlspecialchars($data['nrp']);
   $email = htmlspecialchars($data['email']);
   $jurusan = htmlspecialchars($data['jurusan']);
-  $gambar = htmlspecialchars($data['gambar']);
+  $gambar_lama = htmlspecialchars($data['gambar_lama']);
+
+  $gambar = upload();
+  if (!$gambar) {
+    return false;
+  }
+
+  if ($gambar == 'nophoto.jpg') {
+    $gambar = $gambar_lama;
+  }
+
 
   $query = "UPDATE mahasiswa SET
           nama = '$nama',
