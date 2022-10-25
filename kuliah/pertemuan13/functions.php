@@ -52,7 +52,7 @@ function upload()
   }
 
   //cek type file
-  if ($tipe_file != 'image/jpeg' && $tipe_file != 'image/png') {
+  if ($tipe_file != 'image/jpg' && $tipe_file != 'image/png') {
     echo "<script>
             alert('yang anda pilih bukan gambar!');
             </script>";
@@ -103,12 +103,18 @@ function tambah($data)
 
   mysqli_query($conn, $query) or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
-};
+}
 
 
 function hapus($id)
 {
   $conn = koneksi();
+
+  //menghapus gambar dari folder img
+  $mhs = query("SELECT * FROM mahasiswa WHERE id = $id");
+  if ($mhs['gambar'] != 'nophoto.jpg') {
+    unlink('img/' . $mhs['gambar']);
+  }
   mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id") or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
 }

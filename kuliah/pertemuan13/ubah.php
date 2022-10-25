@@ -44,7 +44,7 @@ if (isset($_POST['ubah'])) {
 
 <body>
   <h3>Form Ubah Data Mahasiswa</h3>
-  <form action="" method="POST" enctype=" multipart/form-data">
+  <form action="" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?= $m['id']; ?>">
     <ul>
       <li>
@@ -61,13 +61,13 @@ if (isset($_POST['ubah'])) {
       </li>
       <li>
         <label>
-          Email
+          Email :
           <input type="text" name="email" required value="<?= $m['email']; ?>">
         </label>
       </li>
       <li>
         <label>
-          Jurusan
+          Jurusan :
           <input type="text" name="jurusan" required value="<?= $m['jurusan']; ?>">
         </label>
       </li>
